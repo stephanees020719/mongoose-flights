@@ -1,25 +1,28 @@
 const React = require("react")
- 
-class New extends React.Component {
+ class New extends React.Component {
   render() {
+    const date = new Date();
+    const futureDate = date.getDate() + 365;
+    date.setDate(futureDate);
+    const defaultValue = date.toLocaleDateString('en-CA');
     return (
-      <div style={{backgroundColor: 'white', color: 'black', fontFamily: 'Arial, sans-serif'}}>
-        <h1 style={{fontSize: '24px', fontWeight: 'bold'}}>Reserved your Flight Here</h1>
- 
+      <div>
+        <h1>
+            Add New Flight
+        </h1>
         <form action="/flights" method="POST">
-        User Name: <input type="text" name="userName" /> <br />
-          Airline: <input type="text" name="airline" /> <br />
-          Flight No.: <input type="text" name="flightNo" /> <br />
-          Departure: <input type="datetime-local" name="departs" /> <br />
- 
-          <input type="submit" value="Create" /><br />
+            Airline <input type="text" name="airline" /><br />
+            Flight Number <input type="number" name="flightNo" min={10} max={9999} /><br />
+            Departure <input type="datetime-locale" name="departs" defaultValue={defaultValue}/><br />
+            <input type="submit" value="Submit New Flight" />
         </form>
-        <nav>
-          <a href="/flights" style={{textDecoration: 'none', color: 'blue'}}>Back</a>
-        </nav>
       </div>
     )
   }
 }
+
+
+
+
  
 module.exports = New

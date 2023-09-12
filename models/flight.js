@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
  
 const flightSchema = new mongoose.Schema({
-    userName:{
-        type: String
-    },
+    // userName:{
+    //     type: String
+    // },
     airline: { 
         type: String, 
         enum: ['American', 'Southwest', 'United'],

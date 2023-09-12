@@ -1,5 +1,3 @@
-
-
 require("dotenv").config() //needs to be there to work
 const express = require('express');
 const Flight = require('./models/flight');
