@@ -16,6 +16,9 @@ const React = require("react")
             Departure <input type="datetime-locale" name="departs" defaultValue={defaultValue}/><br />
             <input type="submit" value="Submit New Flight" />
         </form>
+        <nav>
+          <a href="/flights" style={{textDecoration: 'none', color: 'blue'}}>Back to flight page</a>
+        </nav>
       </div>
     )
   }

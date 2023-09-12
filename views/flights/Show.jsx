@@ -8,7 +8,7 @@ class Show extends React.Component {
     return (
       <div style={{backgroundColor: 'white', color: 'black', fontFamily: 'Arial, sans-serif'}}>
         <h1 style={{fontSize: '24px', fontWeight: 'bold'}}> Thank you for visiting CheapFlights.net </h1>
-        <p>Your flight is created</p>
+        <p>Your  created flight is  </p>
         {/* <p>User Name: {userName}</p> */}
         <p>Airline: {airline}</p>
         <p>Flight No.: {flightNo}</p>
